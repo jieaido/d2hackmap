@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="d2hackmap">
+</Property><Property Name="Solution File" Value="E:\Develop\VS\D21.11\d2hackmap\d2hackmap\d2hackmap.sln">
+</Property><Property Name="Date" Value="2013年3月31日">
+</Property><Property Name="Time" Value="20:02:40">
+</Property></Properties><Event ErrorLevel="0" Project="d2hackmap" Source="d2hackmap.vcproj" Description="Converting project file 'E:\Develop\VS\D21.11\d2hackmap\d2hackmap\d2hackmap.vcproj'.">
+</Event><Event ErrorLevel="1" Project="d2hackmap" Source="d2hackmap.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="d2hackmap" Source="d2hackmap.vcproj" Description="MSB8012: $(TargetPath) ('E:\Develop\VS\D21.11\d2hackmap\d2hackmap\Release\d2hackmap.dll') does not match the Linker's OutputFile property value 'D:\Game\Diablo II\TEST\d2hackmap.dll' ('D:\Game\Diablo II\TEST\d2hackmap.dll') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="d2hackmap" Source="d2hackmap.vcproj" Description="Done converting to new project file 'E:\Develop\VS\D21.11\d2hackmap\d2hackmap\d2hackmap.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="d2hackmap" Source="d2hackmap.vcproj" Description="Converted">
+</Event></UpgradeLog>

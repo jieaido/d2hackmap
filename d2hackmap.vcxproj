@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{906346E1-96E7-4D8D-9774-1F34B6B403E0}</ProjectGuid>
+    <RootNamespace>d2hackmap</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\aliBoxGames\games\1262\DIABLO2\pTest1\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\aliBoxGames\games\1262\DIABLO2\pTest1\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;D2HACKMAP_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>d2hackmap.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;D2HACKMAP_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>G:\aliBoxGames\games\1262\DIABLO2\pTest1\$(ProjectName).dll</OutputFile>
+      <ModuleDefinitionFile>d2hackmap.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(TargetDir)$(TargetName).map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="d2hackmap.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DllMain.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+    </ClCompile>
+    <ClCompile Include="GlobalVariable.cpp" />
+    <ClCompile Include="HelpFunc.cpp" />
+    <ClCompile Include="Install.cpp" />
+    <ClCompile Include="LoadConfig.cpp" />
+    <ClCompile Include="LockWindow.cpp" />
+    <ClCompile Include="RunTo.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="D2CallStub.cpp" />
+    <ClCompile Include="D2HelpFunc.cpp" />
+    <ClCompile Include="GameMainLoop.cpp" />
+    <ClCompile Include="KeyEventControl.cpp" />
+    <ClCompile Include="PacketHandler.cpp" />
+    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="Environment.cpp" />
+    <ClCompile Include="GameCount.cpp" />
+    <ClCompile Include="GameMonitor.cpp" />
+    <ClCompile Include="MessageLog.cpp" />
+    <ClCompile Include="PartyInfo.cpp" />
+    <ClCompile Include="RoomInfo.cpp" />
+    <ClCompile Include="ScreenHook.cpp" />
+    <ClCompile Include="ShowOrbs.cpp" />
+    <ClCompile Include="ItemDefine.cpp" />
+    <ClCompile Include="ItemDesc.cpp" />
+    <ClCompile Include="ItemExtInfo.cpp" />
+    <ClCompile Include="ItemInGround.cpp" />
+    <ClCompile Include="ItemName.cpp" />
+    <ClCompile Include="ItemVariableProp.cpp" />
+    <ClCompile Include="CheckDangerous.cpp" />
+    <ClCompile Include="IMEProtect.cpp" />
+    <ClCompile Include="ItemSocketProtect.cpp" />
+    <ClCompile Include="QuestProtect.cpp" />
+    <ClCompile Include="UnicodeSupport.cpp" />
+    <ClCompile Include="MonsterColour.cpp" />
+    <ClCompile Include="MonsterDeath.cpp" />
+    <ClCompile Include="MonsterLifeBar.cpp" />
+    <ClCompile Include="MonsterTC.cpp" />
+    <ClCompile Include="PlayerLifeBar.cpp" />
+    <ClCompile Include="ViewTargetUnitInfo.cpp" />
+    <ClCompile Include="ViewUnitStat.cpp" />
+    <ClCompile Include="AutoMap.cpp" />
+    <ClCompile Include="AutoMapBlob.cpp" />
+    <ClCompile Include="AutoMapCell.cpp" />
+    <ClCompile Include="MinimapPoint.cpp" />
+    <ClCompile Include="RoomArea.cpp" />
+    <ClCompile Include="AutoEnchant.cpp" />
+    <ClCompile Include="GameChat.cpp" />
+    <ClCompile Include="GameFilter.cpp" />
+    <ClCompile Include="GameWindow.cpp" />
+    <ClCompile Include="NsPassBugFix.cpp" />
+    <ClCompile Include="OutTownSelect.cpp" />
+    <ClCompile Include="PartyHelp.cpp" />
+    <ClCompile Include="PermShowItem.cpp" />
+    <ClCompile Include="QuickBackTown.cpp" />
+    <ClCompile Include="QuickGame.cpp" />
+    <ClCompile Include="QuickSwapItem.cpp" />
+    <ClCompile Include="ScrollLock.cpp" />
+    <ClCompile Include="SkipNpcMessage.cpp" />
+    <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="TransGoldHelp.cpp" />
+    <ClCompile Include="ULCPath.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="HelpFunc.h" />
+    <ClInclude Include="History.h" />
+    <ClInclude Include="Install.h" />
+    <ClInclude Include="Module.h" />
+    <ClInclude Include="monster.h" />
+    <ClInclude Include="MyStructs.h" />
+    <ClInclude Include="m_DoubleTP.h" />
+    <ClInclude Include="m_LockWindow.h" />
+    <ClInclude Include="m_RunTo.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="m_end.h" />
+    <ClInclude Include="m_PacketHandler.h" />
+    <ClInclude Include="m_pub.h" />
+    <ClInclude Include="m_start.h" />
+    <ClInclude Include="m_Test.h" />
+    <ClInclude Include="m_AutoMap.h" />
+    <ClInclude Include="m_AutoMapBlob.h" />
+    <ClInclude Include="m_AutoMapCell.h" />
+    <ClInclude Include="m_MinimapPoint.h" />
+    <ClInclude Include="m_RoomArea.h" />
+    <ClInclude Include="m_AutoEnchant.h" />
+    <ClInclude Include="m_GameChat.h" />
+    <ClInclude Include="m_GameFilter.h" />
+    <ClInclude Include="m_GameWindow.h" />
+    <ClInclude Include="m_NsPassBugFix.h" />
+    <ClInclude Include="m_OutTownSelect.h" />
+    <ClInclude Include="m_PartyHelp.h" />
+    <ClInclude Include="m_PermShowItem.h" />
+    <ClInclude Include="m_QuickBackTown.h" />
+    <ClInclude Include="m_QuickGame.h" />
+    <ClInclude Include="m_QuickSwapItem.h" />
+    <ClInclude Include="m_ScrollLock.h" />
+    <ClInclude Include="m_SkipNpcMessage.h" />
+    <ClInclude Include="m_Socket.h" />
+    <ClInclude Include="m_TransGoldHelp.h" />
+    <ClInclude Include="m_UlCPath.h" />
+    <ClInclude Include="m_DrawFunc.h" />
+    <ClInclude Include="m_Environment.h" />
+    <ClInclude Include="m_GameCount.h" />
+    <ClInclude Include="m_GameMonitor.h" />
+    <ClInclude Include="m_MessageLog.h" />
+    <ClInclude Include="m_PartyInfo.h" />
+    <ClInclude Include="m_RoomInfo.h" />
+    <ClInclude Include="m_ScreenHook.h" />
+    <ClInclude Include="m_ShowOrbs.h" />
+    <ClInclude Include="m_ItemDefine.h" />
+    <ClInclude Include="m_ItemDesc.h" />
+    <ClInclude Include="m_ItemExtInfo.h" />
+    <ClInclude Include="m_ItemInGround.h" />
+    <ClInclude Include="m_ItemName.h" />
+    <ClInclude Include="m_ItemVariableProp.h" />
+    <ClInclude Include="m_MonsterDeath.h" />
+    <ClInclude Include="m_MonsterLifeBar.h" />
+    <ClInclude Include="m_PlayerLifeBar.h" />
+    <ClInclude Include="m_ViewTargetUnitInfo.h" />
+    <ClInclude Include="m_ViewUnitStat.h" />
+    <ClInclude Include="m_CheckDangerous.h" />
+    <ClInclude Include="m_IMEProtect.h" />
+    <ClInclude Include="m_ItemSocketProtect.h" />
+    <ClInclude Include="m_QuestProtect.h" />
+    <ClInclude Include="m_UnicodeSupport.h" />
+    <ClInclude Include="d2callstub.h" />
+    <ClInclude Include="d2helpfunc.h" />
+    <ClInclude Include="d2Info.h" />
+    <ClInclude Include="d2packet.h" />
+    <ClInclude Include="d2ptrs.h" />
+    <ClInclude Include="d2structs.h" />
+    <ClInclude Include="d2vars.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
